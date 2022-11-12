@@ -8,6 +8,6 @@ internal sealed class Book : EntityWithId<Guid>
     public string Description { get; set; } = string.Empty;
     public string ImageUrl { get; set; } = string.Empty;
     public int PagesCount { get; set; }
-    public DateTime DatePublish { get; set; }
+    public DateTime? DatePublish { get; set; }
     public DateTime DateCreate { get; set; }
 }

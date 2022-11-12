@@ -43,3 +43,8 @@ C:\Temp\Gateway\BookApi\obj\Debug\net7.0\refint\BookApi.dll
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.pdb
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.genruntimeconfig.cache
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\ref\BookApi.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Humanizer.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\System.CodeDom.dll
