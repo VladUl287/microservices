@@ -1,0 +1,24 @@
+{
+  "SwaggerEndPoints": [
+    {
+      "Key": "BookApi",
+      "Config": [
+        {
+          "Name": "Books API",
+          "Version": "v1",
+          "Url": "https://localhost:7095/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "BasketApi",
+      "Config": [
+        {
+          "Name": "Basket API",
+          "Version": "v1",
+          "Url": "https://localhost:7284/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

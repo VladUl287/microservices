@@ -1,0 +1,16 @@
+{
+	"Routes": [
+		{
+			"DownstreamPathTemplate": "/api/basket",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 7284
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/product",
+			"UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+		}
+	]
+}

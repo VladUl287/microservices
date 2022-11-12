@@ -1,0 +1,12 @@
+C:\Temp\Gateway\MessageBus\bin\Debug\net7.0\MessageBus.deps.json
+C:\Temp\Gateway\MessageBus\bin\Debug\net7.0\MessageBus.dll
+C:\Temp\Gateway\MessageBus\bin\Debug\net7.0\MessageBus.pdb
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.csproj.AssemblyReference.cache
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.AssemblyInfoInputs.cache
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.AssemblyInfo.cs
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.csproj.CoreCompileInputs.cache
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.dll
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\refint\MessageBus.dll
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\MessageBus.pdb
+C:\Temp\Gateway\MessageBus\obj\Debug\net7.0\ref\MessageBus.dll
