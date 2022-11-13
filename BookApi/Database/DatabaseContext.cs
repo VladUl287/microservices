@@ -6,11 +6,8 @@ namespace BookApi.Database;
 
 internal sealed class DatabaseContext : DbContext
 {
-    private readonly string? DefaultSchemaName;
-
-    public DatabaseContext(DbContextOptions<DatabaseContext> contextOptions, IConfiguration configuration) : base(contextOptions)
-    {
-        DefaultSchemaName = configuration.GetValue<string>("DefaultSchemaName");
+    public DatabaseContext(DbContextOptions<DatabaseContext> contextOptions) : base(contextOptions)
+    {;
     }
 
     public DbSet<Book> Books { get; init; }
@@ -28,7 +25,7 @@ internal sealed class DatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema(DefaultSchemaName);
+        modelBuilder.HasDefaultSchema("Book");
 
         modelBuilder.Entity<Book>(entity =>
         {

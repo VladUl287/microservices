@@ -42,3 +42,8 @@ C:\Temp\Gateway\BasketApi\obj\Debug\net7.0\refint\BasketApi.dll
 C:\Temp\Gateway\BasketApi\obj\Debug\net7.0\BasketApi.pdb
 C:\Temp\Gateway\BasketApi\obj\Debug\net7.0\BasketApi.genruntimeconfig.cache
 C:\Temp\Gateway\BasketApi\obj\Debug\net7.0\ref\BasketApi.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Humanizer.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\System.CodeDom.dll

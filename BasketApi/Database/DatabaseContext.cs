@@ -6,11 +6,8 @@ namespace BasketApi.Database;
 
 internal sealed class DatabaseContext : DbContext
 {
-    private readonly string? DefaultSchemaName;
-
-    public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration) : base(options)
+    public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
     {
-        DefaultSchemaName = configuration.GetValue<string>("DefaultSchemaName");
     }
 
     public DbSet<BasketItem> Basket { get; init; }
@@ -28,7 +25,7 @@ internal sealed class DatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema(DefaultSchemaName);
+        modelBuilder.HasDefaultSchema("Basket");
 
         modelBuilder.Entity<BasketItem>(entity =>
         {

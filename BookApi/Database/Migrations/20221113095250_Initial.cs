@@ -12,11 +12,11 @@ namespace BookApi.Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "BookApiSchema");
+                name: "Book");
 
             migrationBuilder.CreateTable(
                 name: "Books",
-                schema: "BookApiSchema",
+                schema: "Book",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -34,7 +34,7 @@ namespace BookApi.Database.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Books_Name",
-                schema: "BookApiSchema",
+                schema: "Book",
                 table: "Books",
                 column: "Name",
                 unique: true);
@@ -45,7 +45,7 @@ namespace BookApi.Database.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Books",
-                schema: "BookApiSchema");
+                schema: "Book");
         }
     }
 }
