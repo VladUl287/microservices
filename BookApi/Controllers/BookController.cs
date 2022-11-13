@@ -50,13 +50,13 @@ internal class BookController : ControllerBase
     [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(Guid))]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Error<string>))]
     public async Task<IActionResult> CreateBook([FromBody] BookDto createBook)
-	{
-		var result = await bookRepository.CreateBook(createBook);
+    {
+        var result = await bookRepository.CreateBook(createBook);
 
         return result.Match<IActionResult>(
             guid => CreatedAtAction(nameof(GetBook), guid, null),
             exists => BadRequest(exists));
-	}
+    }
 
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
