@@ -42,7 +42,15 @@
           "dependencies": {
             "EasyNetQ": {
               "target": "Package",
-              "version": "[7.3.0, )"
+              "version": "[7.3.2, )"
+            },
+            "EasyNetQ.Serialization.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.3.2, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.3, )"
             }
           },
           "imports": [

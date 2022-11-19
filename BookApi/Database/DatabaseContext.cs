@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookApi.Database;
 
-internal sealed class DatabaseContext : DbContext
+public sealed class DatabaseContext : DbContext
 {
     public DatabaseContext(DbContextOptions<DatabaseContext> contextOptions) : base(contextOptions)
     {;

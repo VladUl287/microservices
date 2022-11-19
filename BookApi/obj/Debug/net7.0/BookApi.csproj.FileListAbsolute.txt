@@ -48,3 +48,6 @@ C:\Temp\Gateway\BookApi\obj\Debug\net7.0\refint\BookApi.dll
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.pdb
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.genruntimeconfig.cache
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\ref\BookApi.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\EasyNetQ.Serialization.NewtonsoftJson.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Polly.dll

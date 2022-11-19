@@ -1,6 +1,6 @@
 ﻿namespace BasketApi.Services.Contracts;
 
-internal interface IBookService
+public interface IBookService
 {
     Task<object?> GetBook(Guid id);
 }

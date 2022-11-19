@@ -2,7 +2,7 @@
 
 namespace BookApi.Database.Entities;
 
-internal sealed class Book : EntityWithId<Guid>
+public sealed class Book : EntityWithId<Guid>
 {
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;

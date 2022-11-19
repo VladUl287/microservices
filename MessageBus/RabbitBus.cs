@@ -1,5 +1,6 @@
 ﻿using EasyNetQ;
 using MessageBus.Contracts;
+using Polly;
 
 namespace MessageBus;
 
@@ -10,13 +11,14 @@ public sealed class RabbitBus : IMessageBus
 
     public RabbitBus(string connection)
     {
-        this.bus = RabbitHutch.CreateBus(connection);
+        bus = RabbitHutch.CreateBus(connection);
     }
 
     public List<SubscriptionResult> SubscriptionResults { get; init; } = new();
 
     public async Task PublishAsync<T>(T message)
     {
+        //Policy.Handle<Exception>().WaitAndRetryAsync(5);
         await bus.PubSub.PublishAsync(message);
     }
 

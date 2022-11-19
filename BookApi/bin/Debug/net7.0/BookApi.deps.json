@@ -43,14 +43,26 @@
           }
         }
       },
-      "EasyNetQ/7.3.0": {
+      "EasyNetQ/7.3.2": {
         "dependencies": {
           "RabbitMQ.Client": "6.4.0"
         },
         "runtime": {
           "lib/netstandard2.0/EasyNetQ.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.3.0.0"
+            "fileVersion": "7.3.2.0"
+          }
+        }
+      },
+      "EasyNetQ.Serialization.NewtonsoftJson/7.3.2": {
+        "dependencies": {
+          "EasyNetQ": "7.3.2",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EasyNetQ.Serialization.NewtonsoftJson.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.3.2.0"
           }
         }
       },
@@ -202,6 +214,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
       "Npgsql/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "7.0.0",
@@ -233,6 +253,14 @@
           "lib/netstandard2.0/OneOf.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Polly/7.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.3.0"
           }
         }
       },
@@ -305,7 +333,9 @@
       "System.Threading.Channels/4.7.1": {},
       "MessageBus/1.0.0": {
         "dependencies": {
-          "EasyNetQ": "7.3.0"
+          "EasyNetQ": "7.3.2",
+          "EasyNetQ.Serialization.NewtonsoftJson": "7.3.2",
+          "Polly": "7.2.3"
         },
         "runtime": {
           "MessageBus.dll": {}
@@ -333,12 +363,19 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
     },
-    "EasyNetQ/7.3.0": {
+    "EasyNetQ/7.3.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2dLan3/usuXkVrfrIXn61iBjo/SA04itIzLz4t3A1DSCMv9EqQu6uFA057ZoyYTV1aTMFlaMIAWfYUSQof6NmQ==",
-      "path": "easynetq/7.3.0",
-      "hashPath": "easynetq.7.3.0.nupkg.sha512"
+      "sha512": "sha512-7eQsbJQlmdn6tkweZdlBfVeVwWmAhl7p0JiDxb6MbHnmJPMAlGsZqjkoDFdB1whpGcc3poziyEsf96Zj1Fl0ew==",
+      "path": "easynetq/7.3.2",
+      "hashPath": "easynetq.7.3.2.nupkg.sha512"
+    },
+    "EasyNetQ.Serialization.NewtonsoftJson/7.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jH3lBraE2qsFbsNDmXMulNweiqY+bsNtQuW35r4aX66DnmLGva6IXZ8T43Y1VAKytC3DglR54SnK615ya7ttmg==",
+      "path": "easynetq.serialization.newtonsoftjson/7.3.2",
+      "hashPath": "easynetq.serialization.newtonsoftjson.7.3.2.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -494,6 +531,13 @@
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
     },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
     "Npgsql/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -514,6 +558,13 @@
       "sha512": "sha512-YWabiHBFfDdKIO7/TEa72mARVVo5u5FqFnfXuTqjIupMvJlhoH8d0m4uKtczaINuT0vGR1qlXJayeU6bTw5myg==",
       "path": "oneof/3.0.223",
       "hashPath": "oneof.3.0.223.nupkg.sha512"
+    },
+    "Polly/7.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
+      "path": "polly/7.2.3",
+      "hashPath": "polly.7.2.3.nupkg.sha512"
     },
     "RabbitMQ.Client/6.4.0": {
       "type": "package",

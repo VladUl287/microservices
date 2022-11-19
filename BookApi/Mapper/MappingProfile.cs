@@ -4,7 +4,7 @@ using BookApi.Dtos;
 
 namespace BookApi.Mapper;
 
-internal sealed class MappingProfile : Profile
+public sealed class MappingProfile : Profile
 {
 	public MappingProfile()
 	{

@@ -1,34 +1,27 @@
-﻿using AutoMapper;
-using OneOf.Types;
+﻿using OneOf.Types;
 using BookApi.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using BookApi.Database.Repositories.Contracts;
-using MessageBus.Contracts;
-using MessageBus.Messages;
+using BookApi.Services.Contracts;
 
 namespace BookApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-internal class BookController : ControllerBase
+public class BookController : ControllerBase
 {
-    private readonly IMapper mapper;
-    private readonly IMessageBus messageBus;
-	private readonly IBookRepository bookRepository;
+	private readonly IBookService bookService;
 
-    public BookController(IBookRepository bookRepository, IMapper mapper, IMessageBus messageBus)
+    public BookController(IBookService bookService)
     {
-        this.mapper = mapper;
-        this.messageBus = messageBus;
-        this.bookRepository = bookRepository;
+        this.bookService = bookService;
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:Guid}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<BookDto>))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetBook([FromRoute] Guid id)
     {
-        var result = await bookRepository.GetBook(id);
+        var result = await bookService.GetBook(id);
 
         return result.Match<IActionResult>(
             book => Ok(book),
@@ -39,11 +32,7 @@ internal class BookController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<BookDto>))]
     public async Task<IActionResult> GetBooks([FromQuery] BookFilterDto bookFilterDto)
     {
-        var books = await bookRepository.GetBooks(bookFilterDto);
-
-        var booksDto = mapper.Map<IEnumerable<BookDto>>(books);
-
-        return Ok(booksDto);
+        return Ok(await bookService.GetBooks(bookFilterDto));
     }
 
     [HttpPost]
@@ -51,32 +40,22 @@ internal class BookController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Error<string>))]
     public async Task<IActionResult> CreateBook([FromBody] BookDto createBook)
     {
-        var result = await bookRepository.CreateBook(createBook);
+        var result = await bookService.CreateBook(createBook);
 
         return result.Match<IActionResult>(
             guid => CreatedAtAction(nameof(GetBook), guid, null),
-            exists => BadRequest(exists));
+            error => BadRequest(error));
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:Guid}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Guid))]
-    public async Task<IActionResult> DeleteBook([FromRoute] Guid bookId)
+    public async Task<IActionResult> DeleteBook([FromRoute] Guid id)
     {
-        var result = await bookRepository.DeleteBook(bookId);
+        var result = await bookService.DeleteBook(id);
 
-        if (result.IsT0)
-        {
-            await messageBus.PublishAsync(
-                new DeleteItem<Guid>
-                {
-                    ItemId = result.AsT0.Id,
-                    DateTime = DateTime.UtcNow
-                });
-
-            return NoContent();
-        }
-
-        return NotFound(bookId);
+        return result.Match<IActionResult>(
+            success => NoContent(),
+            notFound => NotFound(id));
     }
 }

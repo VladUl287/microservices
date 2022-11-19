@@ -47,3 +47,6 @@ C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\System.CodeDom.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\EasyNetQ.Serialization.NewtonsoftJson.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Polly.dll

@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace BasketApi.Database;
 
-internal sealed class DatabaseContext : DbContext
+public sealed class DatabaseContext : DbContext
 {
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
     {
@@ -38,7 +38,6 @@ internal sealed class DatabaseContext : DbContext
                 .IsRequired();
 
             entity.Property(x => x.DateAdd)
-                .HasDefaultValueSql("now()")
                 .IsRequired();
         });
 

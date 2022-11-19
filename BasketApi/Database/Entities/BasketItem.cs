@@ -2,7 +2,7 @@
 
 namespace BasketApi.Database.Entities;
 
-internal sealed class BasketItem : EntityWithId<Guid>
+public sealed class BasketItem : EntityWithId<Guid>
 {
     public Guid ObjectId { get; set; }
     public Guid UserId { get; set; }

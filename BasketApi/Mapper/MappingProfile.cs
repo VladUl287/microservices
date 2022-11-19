@@ -4,7 +4,7 @@ using BasketApi.Database.Entities;
 
 namespace BasketApi.Mapper;
 
-internal sealed class MappingProfile : Profile
+public sealed class MappingProfile : Profile
 {
 	public MappingProfile()
 	{

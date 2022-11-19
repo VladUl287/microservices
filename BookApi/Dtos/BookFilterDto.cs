@@ -1,6 +1,6 @@
 ﻿namespace BookApi.Dtos;
 
-internal sealed class BookFilterDto
+public sealed class BookFilterDto
 {
     public int? Page { get; init; }
 

@@ -1,20 +1,22 @@
 using BookApi.Database;
-using BookApi.Database.Repositories;
-using BookApi.Database.Repositories.Contracts;
 using BookApi.Mapper;
+using BookApi.Services;
+using BookApi.Services.Contracts;
+using MessageBus;
+using MessageBus.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var dbConnection = builder.Configuration.GetConnectionString("DefaultDbConnection");
-var rabbintConnection = builder.Configuration.GetConnectionString("RabbitMQConnection");
+var rabbitConnection = builder.Configuration.GetConnectionString("RabbitMQConnection");
 
 var services = builder.Configuration.GetSection("ServicesUrl");
 var gateway = services.GetValue<string>("Gateway");
 
-if (string.IsNullOrEmpty(gateway))
+if (string.IsNullOrEmpty(gateway) || string.IsNullOrEmpty(rabbitConnection))
 {
-    throw new AggregateException(nameof(services));
+    throw new AggregateException(nameof(builder.Configuration));
 }
 
 var corsOrigins = new string[] 
@@ -28,12 +30,14 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 {
     options.UseNpgsql(dbConnection);
 });
-builder.Services.AddTransient<IBookRepository, BookRepository>();
+builder.Services.AddTransient<IBookService, BookService>();
 
 builder.Services.AddAutoMapper(config =>
 {
     config.AddProfile<MappingProfile>();
 });
+
+builder.Services.AddSingleton<IMessageBus, RabbitBus>((provider) => new RabbitBus(rabbitConnection));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -42,9 +46,12 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(config =>
+    {
+        config.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        config.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();

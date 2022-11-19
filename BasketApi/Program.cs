@@ -1,9 +1,11 @@
 using BasketApi.Mapper;
-using BasketApi.Services;
 using BasketApi.Database;
 using Microsoft.EntityFrameworkCore;
-using BasketApi.Database.Repositories;
-using BasketApi.Database.Repositories.Contracts;
+using MessageBus;
+using MessageBus.Contracts;
+using BasketApi.Services.Host;
+using BasketApi.Services.Microservices;
+using BasketApi.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,15 +33,16 @@ builder.Services.AddDbContext<DatabaseContext>(config =>
 {
     config.UseNpgsql(dbConnection);
 });
-builder.Services.AddTransient<IBasketRepository, BasketRepository>();
+builder.Services.AddTransient<IBasketService, BasketService>();
 
 builder.Services.AddHttpClient<BookService>(config =>
 {
     config.BaseAddress = new Uri(bookApi);
 });
 
-//builder.Services.AddSingleton<IMessageBus, RabbitBus>(new RabbitBus(""));
-//builder.Services.AddHostedService<SubsriberService>();
+builder.Services.AddSingleton<IMessageBus, RabbitBus>((provider) => new RabbitBus(rabbintConnection));
+
+builder.Services.AddHostedService<SubsriberService>();
 
 builder.Services.AddAutoMapper(config =>
 {
@@ -53,7 +56,6 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
