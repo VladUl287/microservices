@@ -1,25 +1,30 @@
-﻿using EasyNetQ;
+﻿using Polly;
+using EasyNetQ;
 using MessageBus.Contracts;
-using Polly;
+using Polly.Contrib.WaitAndRetry;
 
 namespace MessageBus;
 
 public sealed class RabbitBus : IMessageBus
 {
     private readonly IBus bus;
+    private readonly IAsyncPolicy retryPolicy;
+
     private bool disposed;
 
     public RabbitBus(string connection)
     {
         bus = RabbitHutch.CreateBus(connection);
+        retryPolicy = Policy
+            .Handle<Exception>()
+            .WaitAndRetryAsync(Backoff.DecorrelatedJitterBackoffV2(TimeSpan.FromSeconds(1), 5));
     }
 
     public List<SubscriptionResult> SubscriptionResults { get; init; } = new();
 
     public async Task PublishAsync<T>(T message)
     {
-        //Policy.Handle<Exception>().WaitAndRetryAsync(5);
-        await bus.PubSub.PublishAsync(message);
+        await retryPolicy.ExecuteAsync(() => bus.PubSub.PublishAsync(message));
     }
 
     public async Task SubscribeAsync<T>(string subscriptionId, Func<T, Task> handler, CancellationToken token = default)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qvpD8eu3iu7Ok6IpDyIScSKNArZTuVLpWNOMXj6Hi3Ftl/QvkvXlB1aFk/1ke8yRaveKXOTAeezUh/i/6Yxomg==",
+  "dgSpecHash": "eQRXew4xDZtjfqSpck5EMnF5MmYoelCM74HUoHJKR5zo2NrWJPqFNBCr7Qy9qdicPGjgj39jintiI02qd2mDxw==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Gateway\\BasketApi\\BasketApi.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\User\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.0\\npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\polly.contrib.waitandretry\\1.1.1\\polly.contrib.waitandretry.1.1.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",

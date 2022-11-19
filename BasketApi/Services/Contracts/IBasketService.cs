@@ -1,5 +1,4 @@
 using BasketApi.Dtos;
-using BasketApi.Database.Entities;
 
 namespace BasketApi.Services.Contracts;
 
@@ -10,4 +9,6 @@ public interface IBasketService
     Task<ItemDto> AddItem(ItemDto baskeItem);
 
     Task DeleteItem(Guid itemId);
+
+    Task DeleteItemsByObject(Guid objectId)
 }

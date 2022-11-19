@@ -52,8 +52,7 @@ public sealed class DatabaseContext : DbContext
                 .IsRequired(false);
 
             entity.Property(x => x.DateCreate)
-                .IsRequired()
-                .HasDefaultValueSql("now()");
+                .IsRequired();
         });
 
         base.OnModelCreating(modelBuilder);

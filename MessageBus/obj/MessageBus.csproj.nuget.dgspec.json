@@ -51,6 +51,10 @@
             "Polly": {
               "target": "Package",
               "version": "[7.2.3, )"
+            },
+            "Polly.Contrib.WaitAndRetry": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             }
           },
           "imports": [

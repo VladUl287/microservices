@@ -1,9 +1,6 @@
-﻿using BasketApi.Database.Repositories;
-using BasketApi.Database.Repositories.Contracts;
+﻿using BasketApi.Services.Contracts;
 using MessageBus.Contracts;
 using MessageBus.Messages;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 
 namespace BasketApi.Services.Host;
 
@@ -11,6 +8,8 @@ public class SubsriberService : IHostedService
 {
     private readonly IMessageBus messageBus;
     private readonly IServiceProvider serviceProvider;
+
+    private const string SubscriptionId = "book_deletion";
 
     public SubsriberService(IMessageBus messageBus, IServiceProvider serviceProvider)
     {
@@ -20,20 +19,20 @@ public class SubsriberService : IHostedService
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
-        await messageBus.SubscribeAsync<DeleteItem<Guid>>("book_deletion", Handler, cancellationToken);
+        await messageBus.SubscribeAsync<DeleteItem<Guid>>(SubscriptionId, Handler, cancellationToken);
     }
 
-    public async Task Handler(DeleteItem<Guid> item)
+    private async Task Handler(DeleteItem<Guid> item)
     {
         using var scope = serviceProvider.CreateAsyncScope();
-        var basketRepository = scope.ServiceProvider.GetService<IBasketRepository>();
+        var basketRepository = scope.ServiceProvider.GetService<IBasketService>();
 
         if (basketRepository is null)
         {
-            throw new Exception();
+            throw new NullReferenceException(nameof(basketRepository));
         }
 
-        await basketRepository.DeleteItem(item.ItemId);
+        await basketRepository.DeleteItemsByObject(item.ObjectId);
     }
 
     public Task StopAsync(CancellationToken cancellationToken)

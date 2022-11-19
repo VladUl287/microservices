@@ -98,7 +98,7 @@ public class BookService : IBookService
         await messageBus.PublishAsync(
             new DeleteItem<Guid>
             {
-                ItemId = book.Id,
+                ObjectId = book.Id,
                 DateTime = DateTime.UtcNow
             });
 
