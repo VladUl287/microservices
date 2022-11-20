@@ -10,7 +10,8 @@
         "dependencies": {
           "EasyNetQ": "7.3.2",
           "EasyNetQ.Serialization.NewtonsoftJson": "7.3.2",
-          "Polly": "7.2.3"
+          "Polly": "7.2.3",
+          "Polly.Contrib.WaitAndRetry": "1.1.1"
         },
         "runtime": {
           "MessageBus.dll": {}
@@ -52,6 +53,14 @@
           "lib/netstandard2.0/Polly.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.2.3.0"
+          }
+        }
+      },
+      "Polly.Contrib.WaitAndRetry/1.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Polly.Contrib.WaitAndRetry.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.1.1.0"
           }
         }
       },
@@ -104,6 +113,13 @@
       "sha512": "sha512-DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
       "path": "polly/7.2.3",
       "hashPath": "polly.7.2.3.nupkg.sha512"
+    },
+    "Polly.Contrib.WaitAndRetry/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MUQLiSo4KDkQe6nzQRhIU05lm9jlexX5BVsbuw0SL82ynZ+GzAHQxJVDPVBboxV37Po3SG077aX8DuSy8TkaA==",
+      "path": "polly.contrib.waitandretry/1.1.1",
+      "hashPath": "polly.contrib.waitandretry.1.1.1.nupkg.sha512"
     },
     "RabbitMQ.Client/6.4.0": {
       "type": "package",

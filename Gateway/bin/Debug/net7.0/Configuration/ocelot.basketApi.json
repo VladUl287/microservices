@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/basket",
+      "DownstreamPathTemplate": "/api/basket/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 7284
         }
       ],
-      "UpstreamPathTemplate": "/api/basket",
+      "UpstreamPathTemplate": "/api/basket/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",

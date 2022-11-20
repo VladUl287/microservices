@@ -10,5 +10,5 @@ public interface IBasketService
 
     Task DeleteItem(Guid itemId);
 
-    Task DeleteItemsByObject(Guid objectId)
+    Task DeleteItemsByObject(Guid objectId);
 }

@@ -2,7 +2,6 @@ C:\Temp\Gateway\Gateway\bin\Debug\net7.0\appsettings.Development.json
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\appsettings.json
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Configuration\ocelot.basketApi.json
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Configuration\ocelot.bookApi.json
-C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Configuration\ocelot.SwaggerEndPoints.json
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Gateway.exe
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Gateway.deps.json
 C:\Temp\Gateway\Gateway\bin\Debug\net7.0\Gateway.runtimeconfig.json
@@ -64,3 +63,4 @@ C:\Temp\Gateway\Gateway\obj\Debug\net7.0\refint\Gateway.dll
 C:\Temp\Gateway\Gateway\obj\Debug\net7.0\Gateway.pdb
 C:\Temp\Gateway\Gateway\obj\Debug\net7.0\Gateway.genruntimeconfig.cache
 C:\Temp\Gateway\Gateway\obj\Debug\net7.0\ref\Gateway.dll
+C:\Temp\Gateway\Gateway\bin\Debug\net7.0\ocelot.json

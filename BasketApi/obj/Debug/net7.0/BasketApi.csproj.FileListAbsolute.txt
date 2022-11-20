@@ -50,3 +50,4 @@ C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\System.CodeDom.dll
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\EasyNetQ.Serialization.NewtonsoftJson.dll
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Polly.dll
+C:\Temp\Gateway\BasketApi\bin\Debug\net7.0\Polly.Contrib.WaitAndRetry.dll

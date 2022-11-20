@@ -33,16 +33,20 @@ builder.Services.AddDbContext<DatabaseContext>(config =>
 {
     config.UseNpgsql(dbConnection);
 });
-builder.Services.AddTransient<IBasketService, BasketService>();
+
 
 builder.Services.AddHttpClient<BookService>(config =>
 {
     config.BaseAddress = new Uri(bookApi);
 });
 
+builder.Services.AddTransient<IBookService, BookService>();
+
+builder.Services.AddTransient<IBasketService, BasketService>();
+
 builder.Services.AddSingleton<IMessageBus, RabbitBus>((provider) => new RabbitBus(rabbintConnection));
 
-builder.Services.AddHostedService<SubsriberService>();
+//builder.Services.AddHostedService<SubsriberService>();
 
 builder.Services.AddAutoMapper(config =>
 {

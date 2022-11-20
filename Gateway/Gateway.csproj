@@ -13,6 +13,6 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties configuration_4ocelot_1swaggerendpoints_1json__JsonSchema="ocelot" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

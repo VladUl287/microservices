@@ -1,6 +1,8 @@
-﻿namespace BasketApi.Services.Microservices;
+﻿using BasketApi.Services.Contracts;
 
-public sealed class BookService
+namespace BasketApi.Services.Microservices;
+
+public sealed class BookService : IBookService
 {
     private readonly HttpClient httpClient;
 
@@ -9,7 +11,7 @@ public sealed class BookService
         this.httpClient = httpClient;
     }
 
-    public async Task<object?> GetBookAsync(Guid id)
+    public async Task<object?> GetBook(Guid id)
     {
         return await httpClient.GetFromJsonAsync<object?>($"/api/catalog/getBook/{id}");
     }

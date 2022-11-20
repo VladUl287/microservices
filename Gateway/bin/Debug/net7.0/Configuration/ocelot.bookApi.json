@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/book",
+      "DownstreamPathTemplate": "/api/book/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 7095
         }
       ],
-      "UpstreamPathTemplate": "/api/book",
+      "UpstreamPathTemplate": "/api/book/{everything}",
       "UpstreamHttpMethod": [
         "GET",
         "POST",
