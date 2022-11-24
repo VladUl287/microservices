@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sdEpp8lkSYnbQXsTFt+K5z1VAd7X8HrqmZiuQ42MbdWVuq1qFfUeGRjk5ztrQNTH0yngNPcyw54yG5GPkEtbiQ==",
+  "dgSpecHash": "1vQjjdECRe8Z9Un+hlR+ozHtX4A5Lg2oS8N/yyv5FN1a1SEG6At3mydlJFNphpezO0wwXd6X412bw40qjbXEaA==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Gateway\\BookApi\\BookApi.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",

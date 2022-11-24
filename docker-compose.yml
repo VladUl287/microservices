@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  gateway:
+    image: ${DOCKER_REGISTRY-}gateway
+    ports:
+      - 5162:80
+      - 7162:443
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+
+  bookapi:
+    image: ${DOCKER_REGISTRY-}bookapi
+    ports:
+      - 5095:80
+      - 7095:443
+    build:
+      context: .
+      dockerfile: BookApi/Dockerfile
+
+  basketapi:
+    image: ${DOCKER_REGISTRY-}basketapi
+    ports:
+      - 5284:80
+      - 7284:443
+    build:
+      context: .
+      dockerfile: BasketApi/Dockerfile
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672

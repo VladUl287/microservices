@@ -41,11 +41,9 @@ builder.Services.AddHttpClient<BookService>(config =>
 });
 
 builder.Services.AddTransient<IBookService, BookService>();
-
 builder.Services.AddTransient<IBasketService, BasketService>();
 
-builder.Services.AddSingleton<IMessageBus, RabbitBus>((provider) => new RabbitBus(rabbintConnection));
-
+//builder.Services.AddSingleton<IMessageBus, RabbitBus>((provider) => new RabbitBus(rabbintConnection));
 //builder.Services.AddHostedService<SubsriberService>();
 
 builder.Services.AddAutoMapper(config =>

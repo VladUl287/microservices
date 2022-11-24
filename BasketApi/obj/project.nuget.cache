@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQRXew4xDZtjfqSpck5EMnF5MmYoelCM74HUoHJKR5zo2NrWJPqFNBCr7Qy9qdicPGjgj39jintiI02qd2mDxw==",
+  "dgSpecHash": "NG4Gm6gvKZNUexlo04U57tgPpUUll7xUXXkrcggMvCaNKy3lwHTE3AECUU8vj1W55umaW2zU0O7UDQJrK+PbsQ==",
   "success": true,
   "projectFilePath": "C:\\Temp\\Gateway\\BasketApi\\BasketApi.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
