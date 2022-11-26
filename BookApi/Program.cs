@@ -12,16 +12,14 @@ var dbConnection = builder.Configuration.GetConnectionString("DefaultDbConnectio
 var rabbitConnection = builder.Configuration.GetConnectionString("RabbitMQConnection");
 
 var services = builder.Configuration.GetSection("ServicesUrl");
+
 var gateway = services.GetValue<string>("Gateway");
+var basket = services.GetValue<string>("BasketApi");
 
-if (string.IsNullOrEmpty(gateway) || string.IsNullOrEmpty(rabbitConnection))
+var corsOrigins = new string[]
 {
-    throw new AggregateException(nameof(builder.Configuration));
-}
-
-var corsOrigins = new string[] 
-{
-    gateway
+    gateway,
+    basket
 };
 
 builder.Services.AddControllers();
@@ -47,11 +45,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(config =>
-    {
-        config.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        config.RoutePrefix = string.Empty;
-    });
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

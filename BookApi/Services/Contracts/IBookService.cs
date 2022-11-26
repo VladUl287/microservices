@@ -1,7 +1,6 @@
-﻿using OneOf;
+﻿using BookApi.Dtos;
+using OneOf;
 using OneOf.Types;
-using BookApi.Dtos;
-using BookApi.Database.Entities;
 
 namespace BookApi.Services.Contracts;
 

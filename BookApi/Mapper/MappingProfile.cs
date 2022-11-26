@@ -6,8 +6,8 @@ namespace BookApi.Mapper;
 
 public sealed class MappingProfile : Profile
 {
-	public MappingProfile()
-	{
-		CreateMap<Book, BookDto>().ReverseMap();
-	}
+    public MappingProfile()
+    {
+        CreateMap<Book, BookDto>().ReverseMap();
+    }
 }

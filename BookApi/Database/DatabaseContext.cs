@@ -1,13 +1,14 @@
-﻿using System.Diagnostics;
-using BookApi.Database.Entities;
+﻿using BookApi.Database.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace BookApi.Database;
 
 public sealed class DatabaseContext : DbContext
 {
     public DatabaseContext(DbContextOptions<DatabaseContext> contextOptions) : base(contextOptions)
-    {;
+    {
+        ;
     }
 
     public DbSet<Book> Books { get; init; }

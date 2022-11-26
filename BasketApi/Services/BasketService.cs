@@ -1,10 +1,10 @@
 using AutoMapper;
-using BasketApi.Dtos;
+using BasketApi.Common;
 using BasketApi.Database;
 using BasketApi.Database.Entities;
+using BasketApi.Dtos;
 using BasketApi.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
-using BasketApi.Common;
 
 namespace BasketApi.Services.Microservices;
 
@@ -37,7 +37,7 @@ public sealed class BasketService : IBasketService
 
         if (book is null)
         {
-           throw new ArgumentException(ErrorsDescription.ItemNotExists);
+            throw new ArgumentException(ErrorsDescription.ItemNotExists);
         }
 
         var exists = await dbContext.Basket

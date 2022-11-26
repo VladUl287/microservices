@@ -1,14 +1,14 @@
-﻿using OneOf;
-using BookApi.Database;
-using BookApi.Services.Contracts;
-using OneOf.Types;
-using BookApi.Dtos;
-using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
 using BookApi.Common;
+using BookApi.Database;
 using BookApi.Database.Entities;
-using AutoMapper;
+using BookApi.Dtos;
+using BookApi.Services.Contracts;
 using MessageBus.Contracts;
 using MessageBus.Messages;
+using Microsoft.EntityFrameworkCore;
+using OneOf;
+using OneOf.Types;
 
 namespace BookApi.Services;
 
@@ -18,10 +18,10 @@ public class BookService : IBookService
     private readonly IMessageBus messageBus;
     private readonly DatabaseContext dbContext;
 
-    public BookService(DatabaseContext dbContext, IMapper mapper, IMessageBus messageBus)
+    public BookService(DatabaseContext dbContext, IMessageBus messageBus, IMapper mapper)
     {
-        this.dbContext = dbContext;
         this.mapper = mapper;
+        this.dbContext = dbContext;
         this.messageBus = messageBus;
     }
 

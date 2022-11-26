@@ -1,7 +1,6 @@
 ﻿using BasketApi.Dtos;
-using Microsoft.AspNetCore.Mvc;
-using BasketApi.Common;
 using BasketApi.Services.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BasketApi.Controllers;
 

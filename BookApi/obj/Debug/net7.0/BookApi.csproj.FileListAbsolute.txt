@@ -8,6 +8,7 @@ C:\Temp\Gateway\BookApi\bin\Debug\net7.0\BookApi.pdb
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\AutoMapper.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\EasyNetQ.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\EasyNetQ.Serialization.NewtonsoftJson.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Humanizer.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -17,9 +18,12 @@ C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relationa
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Npgsql.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\OneOf.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Polly.dll
+C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Polly.Contrib.WaitAndRetry.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -48,7 +52,3 @@ C:\Temp\Gateway\BookApi\obj\Debug\net7.0\refint\BookApi.dll
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.pdb
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\BookApi.genruntimeconfig.cache
 C:\Temp\Gateway\BookApi\obj\Debug\net7.0\ref\BookApi.dll
-C:\Temp\Gateway\BookApi\bin\Debug\net7.0\EasyNetQ.Serialization.NewtonsoftJson.dll
-C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Newtonsoft.Json.dll
-C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Polly.dll
-C:\Temp\Gateway\BookApi\bin\Debug\net7.0\Polly.Contrib.WaitAndRetry.dll

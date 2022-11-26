@@ -1,6 +1,6 @@
-﻿using Polly;
-using EasyNetQ;
+﻿using EasyNetQ;
 using MessageBus.Contracts;
+using Polly;
 using Polly.Contrib.WaitAndRetry;
 
 namespace MessageBus;

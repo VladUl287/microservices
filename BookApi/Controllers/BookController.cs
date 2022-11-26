@@ -1,7 +1,7 @@
-﻿using OneOf.Types;
-using BookApi.Dtos;
-using Microsoft.AspNetCore.Mvc;
+﻿using BookApi.Dtos;
 using BookApi.Services.Contracts;
+using Microsoft.AspNetCore.Mvc;
+using OneOf.Types;
 
 namespace BookApi.Controllers;
 
@@ -9,7 +9,7 @@ namespace BookApi.Controllers;
 [Route("api/[controller]/[action]")]
 public class BookController : ControllerBase
 {
-	private readonly IBookService bookService;
+    private readonly IBookService bookService;
 
     public BookController(IBookService bookService)
     {
