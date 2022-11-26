@@ -13,7 +13,6 @@ public sealed class BookService : IBookService
 
     public async Task<object?> GetBook(Guid id)
     {
-        httpClient.BaseAddress = new Uri("https://localhost:7095");
         return await httpClient.GetFromJsonAsync<object?>($"/api/book/getBook/{id}");
     }
 }
