@@ -13,6 +13,13 @@ public sealed class BookService : IBookService
 
     public async Task<object?> GetBook(Guid id)
     {
-        return await httpClient.GetFromJsonAsync<object?>($"/api/book/getBook/{id}");
+        var result = await httpClient.GetAsync($"/api/book/getBook/{id}");
+
+        if (result.StatusCode == System.Net.HttpStatusCode.OK)
+        {
+            return result.Content.ReadFromJsonAsync<object?>();
+        }
+
+        return null;
     }
 }

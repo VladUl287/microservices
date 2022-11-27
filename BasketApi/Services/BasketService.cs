@@ -66,8 +66,6 @@ public sealed class BasketService : IBasketService
         await dbContext.Basket
             .Where(x => x.Id == itemId)
             .ExecuteDeleteAsync();
-
-        await dbContext.SaveChangesAsync();
     }
 
     public async Task DeleteItemsByObject(Guid objectId)
@@ -75,7 +73,5 @@ public sealed class BasketService : IBasketService
         await dbContext.Basket
             .Where(x => x.ObjectId == objectId)
             .ExecuteDeleteAsync();
-
-        await dbContext.SaveChangesAsync();
     }
 }

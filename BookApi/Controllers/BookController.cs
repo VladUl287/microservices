@@ -43,7 +43,7 @@ public class BookController : ControllerBase
         var result = await bookService.CreateBook(createBook);
 
         return result.Match<IActionResult>(
-            guid => CreatedAtAction(nameof(GetBook), guid, null),
+            guid => CreatedAtAction(nameof(GetBook), new { id = guid }, null),
             error => BadRequest(error));
     }
 

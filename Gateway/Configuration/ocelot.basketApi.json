@@ -16,6 +16,9 @@
         "PUT",
         "DELETE"
       ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[sub] > value"
+      },
       "SwaggerKey": "BasketApi"
     }
   ]
